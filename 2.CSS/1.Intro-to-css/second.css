@@ -1,0 +1,15 @@
+* {
+  color: white;
+  /* background-color: #fff; */
+}
+body {
+  background-color: aquamarine;
+}
+
+div p{
+    color: red;
+}
+
+div>p{
+    color: blue;
+}

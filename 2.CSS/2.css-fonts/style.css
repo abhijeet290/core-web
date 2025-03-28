@@ -1,0 +1,19 @@
+h1 {
+  color: rgb(153, 237, 153);
+  background-color: hsl(188, 88%, 39%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+
+h2 {
+  color:#ff75dd;
+}
+p{
+    color: hsl(354, 67%, 43%);
+}
+
+body{
+    background-image: url(https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
