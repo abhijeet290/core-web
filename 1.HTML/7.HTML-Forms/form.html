@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Forms</title>
+  </head>
+  <body>
+    <!-- Form 1: Full Name, Password, Email, Phone, Message -->
+    <form action="/submit" method="POST">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+      <br /><br />
+
+      <label for="user-password">Password:</label>
+      <input type="password" id="user-password" name="password" required />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+      <br /><br />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br /><br />
+
+      <button type="submit">Send</button>
+    </form>
+
+    <br />
+
+    <!-- Form 2: Number and Range Input -->
+    <form>
+      <label for="quantity">Enter a Number (1-100):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="50" />
+      <br /><br />
+
+      <label for="volume">Select a Value (0-10):</label>
+      <input type="range" id="volume" name="volume" min="0" max="10" step="1" />
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <!-- Form 3: Checkbox (Hobbies) -->
+    <form>
+      <p>Select your hobbies:</p>
+      <input type="checkbox" id="reading" name="hobby" value="Reading" />
+      <label for="reading">Reading</label>
+
+      <input type="checkbox" id="music" name="hobby" value="Music" />
+      <label for="music">Music</label>
+
+      <input type="checkbox" id="sports" name="hobby" value="Sports" />
+      <label for="sports">Sports</label>
+
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <!-- Form 4: Radio Buttons (Gender Selection) -->
+    <form>
+      <p>Select your gender:</p>
+      <input type="radio" id="male" name="gender" value="Male" />
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="Female" />
+      <label for="female">Female</label>
+
+      <input type="radio" id="other" name="gender" value="Other" />
+      <label for="other">Other</label>
+
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <!-- Form 5: Show/Hide Password -->
+    <input>
+      <label for="password-toggle">Password:</label>
+      <input type="password" id="password-toggle" />
+
+      <input type="checkbox" id="showPassword" onclick="togglePassword()" />
+      <label for="showPassword">Show Password</label>
+    </form>
+
+    <script>
+      function togglePassword() {
+        let passwordInput = document.getElementById("password-toggle");
+        let checkbox = document.getElementById("showPassword");
+
+        passwordInput.type = checkbox.checked ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>
