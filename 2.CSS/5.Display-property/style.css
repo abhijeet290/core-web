@@ -1,0 +1,16 @@
+.first {
+  background-color: orange;
+  height: 100px;
+  width: 100px;
+  margin: 40px;
+}
+.second {
+  background-color: blue;
+  height: 100px;
+  width: 199px;
+  margin: 40px;
+}
+span {
+  display: block;
+  margin: 10px;
+}
