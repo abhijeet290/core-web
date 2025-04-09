@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transition Playground</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: teal;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Transition Playground</h1>
+  <div class="box" id="box"></div>
+
+  <div class="buttons">
+    <button onclick="transitionStyle('width')">Width Change</button>
+    <button onclick="transitionStyle('height')">Height Change</button>
+    <button onclick="transitionStyle('color')">Color Change</button>
+    <button onclick="transitionStyle('border-radius')">Border Radius</button>
+    <button onclick="transitionStyle('transform')">Translate</button>
+    <button onclick="transitionStyle('background')">Background Color</button>
+    <button onclick="transitionTiming('ease')">Ease</button>
+    <button onclick="transitionTiming('linear')">Linear</button>
+    <button onclick="transitionTiming('ease-in')">Ease-in</button>
+    <button onclick="transitionTiming('ease-out')">Ease-out</button>
+    <button onclick="transitionTiming('ease-in-out')">Ease-in-out</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+
+    function transitionStyle(type) {
+      box.style.transition = "all 0.5s ease";
+
+      switch (type) {
+        case 'width':
+          box.style.width = box.style.width === '150px' ? '250px' : '150px';
+          break;
+        case 'height':
+          box.style.height = box.style.height === '150px' ? '250px' : '150px';
+          break;
+        case 'color':
+          box.style.color = box.style.color === 'white' ? 'black' : 'white';
+          break;
+        case 'border-radius':
+          box.style.borderRadius = box.style.borderRadius === '10px' ? '50%' : '10px';
+          break;
+        case 'transform':
+          box.style.transform = box.style.transform === 'translateX(100px)' ? 'translateX(0)' : 'translateX(100px)';
+          break;
+        case 'background':
+          box.style.backgroundColor = box.style.backgroundColor === 'teal' ? 'crimson' : 'teal';
+          break;
+      }
+    }
+
+    function transitionTiming(type) {
+      box.style.transition = `all 1s ${type}`;
+      box.style.transform = box.style.transform === 'translateY(100px)' ? 'translateY(0)' : 'translateY(100px)';
+    }
+
+    function reset() {
+      box.style.transition = 'none';
+      box.style.width = '150px';
+      box.style.height = '150px';
+      box.style.borderRadius = '10px';
+      box.style.transform = 'none';
+      box.style.backgroundColor = 'teal';
+      box.style.color = 'black';
+    }
+  </script>
+
+</body>
+</html>

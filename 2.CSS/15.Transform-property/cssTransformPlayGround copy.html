@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transform Playground</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+      background: #f0f0f0;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: royalblue;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Transform Playground</h1>
+  <div class="box" id="box"></div>
+
+  <div class="buttons">
+    <button onclick="apply('translate(50px, 50px)')">Translate</button>
+    <button onclick="apply('translateX(100px)')">TranslateX</button>
+    <button onclick="apply('translateY(-50px)')">TranslateY</button>
+    <button onclick="apply('scale(1.5, 1.5)')">Scale</button>
+    <button onclick="apply('scaleX(2)')">ScaleX</button>
+    <button onclick="apply('scaleY(0.5)')">ScaleY</button>
+    <button onclick="apply('rotate(45deg)')">Rotate</button>
+    <button onclick="apply('skew(20deg, 10deg)')">Skew</button>
+    <button onclick="apply('skewX(30deg)')">SkewX</button>
+    <button onclick="apply('skewY(-30deg)')">SkewY</button>
+    <button onclick="apply('matrix(1, 0.5, -0.5, 1, 30, 30)')">Matrix</button>
+    <button onclick="apply('perspective(500px) rotateX(45deg)')">3D Perspective</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+
+    function apply(transformValue) {
+      box.style.transform = transformValue;
+    }
+
+    function reset() {
+      box.style.transform = 'none';
+    }
+  </script>
+
+</body>
+</html>
