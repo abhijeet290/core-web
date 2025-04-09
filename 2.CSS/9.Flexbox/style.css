@@ -1,0 +1,43 @@
+.container {
+  background-color: aliceblue;
+  height: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: end;
+}
+/* main axis is defined by flex-direction by default it is row */
+/* row: horizontal is main axis */
+/* column: vertical is main axis */
+/* justify content align element along main axis */
+/* align items align element along cross axis */
+.box {
+  height: 150px;
+  width: 150px;
+  border: 5px solid black;
+  margin: 1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.first {
+  font-size: 50px;
+}
+
+.second {
+  font-size: 25px;
+}
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: green;
+}
+.box3 {
+  background-color: blue;
+}
+.box4 {
+  background-color: yellow;
+}

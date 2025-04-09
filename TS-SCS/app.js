@@ -85,3 +85,24 @@ class BottleMaker {
     }
 }
 let b1 = new BottleMaker('railneer', 20);
+class BottleMaker1 {
+    constructor(name) {
+        this.name = name;
+    }
+}
+let bottle1 = new BottleMaker1('Miton');
+bottle1.name = 'cello';
+// functions in typescript
+function login() {
+    console.log('logged in successfully');
+}
+function abcd() {
+    return `this function return a string`;
+}
+function abd(name, cb) {
+    cb('hey');
+    console.log(name);
+}
+abd('harsh', (value) => {
+    console.log(value);
+});

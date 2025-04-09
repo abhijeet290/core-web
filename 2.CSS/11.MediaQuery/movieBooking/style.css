@@ -1,0 +1,139 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(214, 69, 69);
+  padding: 2rem;
+}
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+.right button {
+  margin-left: 0.8rem;
+  font-size: 1.5rem;
+  background-color: rgb(214, 69, 69);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding-top: 0.3rem;
+  cursor: pointer;
+  
+}
+.search {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  padding-top: 2rem;
+  background-color: #e8dfdf;
+}
+.searching {
+  width: 400px;
+  max-width: 60%;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.search > button {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  background-color: rgb(214, 69, 69);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./cover.jpg");
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero > h2 {
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+}
+.hero > button {
+  background-color: rgb(214, 69, 69);
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.popular {
+  text-align: center;
+  padding: 1rem;
+}
+.popular > h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.movie {
+  display: flex;
+  overflow-x: auto; /* auto instead of scroll is smoother */
+  gap: 1rem; /* optional spacing between cards */
+  padding: 1rem;
+  white-space: nowrap; /* prevents wrapping to the next line */
+  scrollbar-width: thin; /* optional styling for scrollbar */
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 auto; /* prevent shrinking and wrapping */
+  width: 250px; /* give fixed width for consistent layout */
+}
+
+.images {
+  height: 400px;
+}
+.card {
+  border: 0.5rem solid gray;
+  background-color: gray;
+  text-align: center;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+.card > h3 {
+  font-size: 2rem;
+}
+
+.bot{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.bot > img{
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+@media (max-width:500px)
+{
+    .logo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right{
+       display: flex; 
+       flex-direction: column;
+       padding-top: 1rem;
+    }
+
+    .movie{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+}

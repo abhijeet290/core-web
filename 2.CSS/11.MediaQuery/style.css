@@ -1,0 +1,24 @@
+.container {
+  /* height: 250px;
+  width: 250px; */
+  background-color: aqua;
+  display: flex;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  background-color: blue;
+}
+
+@media(max-width:500px){
+    .container{flex-direction: column;}
+}
+/* @media (max-width: 500px) {
+  .container {
+    background-color: aliceblue;
+    height: 200px;
+    width: 150px;
+  }
+} */

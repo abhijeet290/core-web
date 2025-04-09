@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgb(253, 243, 243);
+  position: relative;
+}
+.card:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+.card {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 10px solid rgb(253, 243, 243);
+  border-radius: 20px;
+}
+
+.first,.second {
+  margin-left: 200px;
+}
+
+.img3{
+  height: 60px;
+  width: 60px;
+}
+.dine,.delivery,.night{
+  position: relative;
+  bottom: 22px;
+  left: 10px;
+  font-size: 20px;
+  color: gray;
+}
+.second{
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0px;
+  
+}
+.delivery{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.brand {
+  color: rgb(219, 68, 68);
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.searching{
+    width: 300px;
+    margin-right: 50px;
+    position: relative;
+    bottom: 13px;
+    height: 30px;
+}
+
+button{
+    height: 50px;
+    width: 80px;
+    position: relative;
+    bottom: 10px;
+    font-size: 15px;
+    background-color: white;
+    border: none;
+    color:gray;
+    margin-right: 50px;
+}
+.head{
+    background-color: white;
+    /* position: fixed; */
+}
+/* header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 65px; /* Adjust height as needed */
+  /* z-index: 1000; Ensures it stays on top */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Optional: Adds a shadow */
+/* } */
+
+/* main {
+  margin-top: 70px; /* Push content below the fixed header */
+  /* padding: 20px; */ 
+/* } */ 
+
+
+
+.box {
+  display: inline-block;
+}
+
+.img {
+  height: 250px;
+  width: 350px;
+  border-radius: 20px;
+}
+.image {
+  position: relative;
+}
+.off {
+  font-size: 30px;
+  color: white;
+  background-color: rgba(127, 255, 212, 0.407);
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  border-radius: 5px;
+  padding: 0px;
+}
+.restaurant_name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.restaurant,
+.food,
+.location {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.rating {
+  background-color: green;
+  color: white;
+  height: 20px;
+  padding: 3px;
+  position: absolute;
+  right: 5px;
+  border-radius: 8px;
+}
+
+.price,
+.distance {
+  position: absolute;
+  right: 5px;
+}
+
+.food,
+.place {
+  font-size: 15px;
+  color: rgb(161, 158, 158);
+}
+.distance {
+  font-weight: bold;
+  font-size: 13px;
+}

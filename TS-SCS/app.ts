@@ -118,3 +118,30 @@ class BottleMaker{
     constructor(public name:string, public price:number){}
 }
 let b1=new BottleMaker('railneer',20)
+
+class BottleMaker1{
+  constructor(public name:string){}
+}
+
+let bottle1=new BottleMaker1('Miton')
+
+bottle1.name='cello'
+
+// functions in typescript
+
+function login(){
+  console.log('logged in successfully')
+}
+
+function abcd():string{
+  return `this function return a string`
+}
+
+function abd(name:string,cb:(value:string)=>void){
+cb('hey')
+console.log(name)
+}
+abd('harsh',(value:string)=>{
+  console.log(value)
+ 
+})
