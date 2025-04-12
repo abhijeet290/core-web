@@ -1,0 +1,54 @@
+1. What is the difference between == and === in JavaScript?
+== → Loose equality
+It checks for equality after converting the types (type coercion).
+
+
+'5' == 5     // true
+=== → Strict equality
+It checks for equality without type conversion (types must be the same).
+
+
+'5' === 5    // false
+📌 Interview Tip: Always use === for more predictable and bug-free code.
+
+2. Why does null >= 0 return true but null > 0 return false?
+null >= 0 → true
+Because null is converted to 0 → 0 >= 0 → true
+
+null > 0 → false
+Again, null becomes 0 → 0 > 0 → false
+
+💡 But null == 0 is false because == does not convert null to a number.
+
+📌 Weird but true: comparison operators like >=, <, etc., convert null to a number (0), but == treats null as only equal to undefined, nothing else.
+
+3. What’s the output of [] == false and why?
+
+[] == false  // true
+Why?
+
+false is converted to number 0
+
+[] (empty array) is a non-primitive → it gets converted to string first → ""
+
+Then "" → 0
+
+So it becomes: 0 == 0 → true
+
+🧠 So: [] == false → true (due to type coercion)
+
+4. Can you explain how logical && and || short-circuit?
+🔹 && (AND) returns the first falsy value, or the last value if all are truthy.
+
+true && 123        // 123
+false && 123       // false
+'hi' && 0          // 0
+🔹 || (OR) returns the first truthy value, or the last falsy if none are truthy.
+
+false || 'JS'      // 'JS'
+0 || null || 10    // 10
+🧠 Short-circuiting means:
+
+In &&, if the first value is falsy, it stops there.
+
+In ||, if the first value is truthy, it stops there.
