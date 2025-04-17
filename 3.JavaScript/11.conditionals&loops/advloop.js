@@ -7,7 +7,7 @@
 // console.log(Object.getOwnPropertyDescriptor(obj,'name'))
 // writable = true, means we can change the value
 // obj.name='rohan' // name change to rohan
-// writable = false, means we can't change the value
+// writable = false, means we can't change the value (this is done to prevent accidental changes not to prevent from hacking)
 // obj.age=45 // can't change the age
 
 // configurable: if true means we can even change the value of writable and enumerable by making it true ot false
