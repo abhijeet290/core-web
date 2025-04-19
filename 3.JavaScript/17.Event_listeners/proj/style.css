@@ -1,0 +1,27 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(80, 71, 71);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#root {
+  background-color: wheat;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+input {
+  font-size: 20px;
+  padding: 4px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+button {
+  font-size: 20px;
+}
+#result {
+  font-size: 20px;
+}
