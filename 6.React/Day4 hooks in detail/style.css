@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root{
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(235, 224, 224);
+}
+button{
+    width: 70px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 5px;
+
+}

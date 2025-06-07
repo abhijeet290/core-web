@@ -1,0 +1,24 @@
+body {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#root {
+  background-color: #ebe0e0;
+  width: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+button {
+  border-radius: 5px;
+  width: 70px;
+  height: 40px;
+  margin-right: 15px;
+}
+/*# sourceMappingURL=Day4 hooks in detail.3a01df49.css.map */
