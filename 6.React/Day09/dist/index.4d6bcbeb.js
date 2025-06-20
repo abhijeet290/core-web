@@ -18805,33 +18805,24 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+var _useFetch = require("../useFetch");
+var _useFetchDefault = parcelHelpers.interopDefault(_useFetch);
 var _s = $RefreshSig$();
 function Body() {
     _s();
-    const [Profile, setProfile] = (0, _react.useState)([]);
-    const [numberofProfile, setnumberofProfile] = (0, _react.useState)("");
-    async function generateProfile(count) {
-        const ran = Math.floor(1 + Math.random() * 10000);
-        const response = await fetch(`https://api.github.com/users?since=${ran}&per_page=${count}`);
-        const data = await response.json();
-        setProfile(data);
-    }
-    (0, _react.useEffect)(()=>{
-        generateProfile(10);
-    }, []);
+    const { Profile, numberofProfile, setnumberofProfile, generateProfile } = (0, _useFetchDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "but",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "text",
                 className: "inpu",
-                placeholder: "search here",
+                placeholder: "Enter number of profile here",
                 value: numberofProfile,
                 onChange: (e)=>setnumberofProfile(e.target.value)
             }, void 0, false, {
                 fileName: "src/Component/Body.js",
-                lineNumber: 23,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -18839,7 +18830,7 @@ function Body() {
                 children: "Search Profile"
             }, void 0, false, {
                 fileName: "src/Component/Body.js",
-                lineNumber: 30,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -18852,14 +18843,14 @@ function Body() {
                                 src: value.avatar_url
                             }, void 0, false, {
                                 fileName: "src/Component/Body.js",
-                                lineNumber: 37,
+                                lineNumber: 23,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                 children: value.login
                             }, void 0, false, {
                                 fileName: "src/Component/Body.js",
-                                lineNumber: 38,
+                                lineNumber: 24,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -18868,29 +18859,33 @@ function Body() {
                                 children: "Profile"
                             }, void 0, false, {
                                 fileName: "src/Component/Body.js",
-                                lineNumber: 39,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, value.id, true, {
                         fileName: "src/Component/Body.js",
-                        lineNumber: 36,
+                        lineNumber: 22,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/Component/Body.js",
-                lineNumber: 33,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Component/Body.js",
-        lineNumber: 22,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
-_s(Body, "VRtLru7efOZSYJSA+FCQ39KHTdI=");
+_s(Body, "r1/ylstazKBa+kQVGSs3hX0btuY=", false, function() {
+    return [
+        (0, _useFetchDefault.default)
+    ];
+});
 _c = Body;
 exports.default = Body; // Try catch functionality add karo
  // UseCallBack function add karne ki koshish
@@ -18903,6 +18898,45 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","1Fqy1","gLLPy"], "gLLPy", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","../useFetch":"7fZsi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7fZsi":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9828 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9828.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>useFetch);
+var _react = require("react");
+var _s = $RefreshSig$();
+function useFetch() {
+    _s();
+    const [Profile, setProfile] = (0, _react.useState)([]);
+    const [numberofProfile, setnumberofProfile] = (0, _react.useState)("");
+    async function generateProfile(count) {
+        const ran = Math.floor(1 + Math.random() * 10000);
+        const response = await fetch(`https://api.github.com/users?since=${ran}&per_page=${count}`);
+        const data = await response.json();
+        setProfile(data);
+    }
+    (0, _react.useEffect)(()=>{
+        generateProfile(10);
+    }, []);
+    return {
+        Profile,
+        numberofProfile,
+        setnumberofProfile,
+        generateProfile
+    };
+}
+_s(useFetch, "VRtLru7efOZSYJSA+FCQ39KHTdI=");
+
+  $parcel$ReactRefreshHelpers$9828.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","1Fqy1","gLLPy"], "gLLPy", "parcelRequire94c2")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map
