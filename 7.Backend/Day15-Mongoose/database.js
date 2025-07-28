@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config({ quiet: true });
 
 async function main() {
-  await mongoose.connect(
-    "mongodb+srv://admin100x:iOTzlOYLVj8jPNfv@100xdev.ktn5siu.mongodb.net/Bookstore"
-  );
+  await mongoose.connect(`${process.env.DB_URL}`);
 
   // const userSchema = new Schema({
   //   name: String,

@@ -27,10 +27,10 @@ app.delete("/info", async (req, res) => {
   res.send("Deleted");
 });
 
-app.put('/info',async(req,res)=>{
-  await User.updateOne({name:"sunny"},{age:40,city:"katihar"})
-  res.send('updated successfully')
-})
+app.put("/info", async (req, res) => {
+  await User.updateOne({ name: "sunny" }, { age: 40, city: "katihar" });
+  res.send("updated successfully");
+});
 
 main()
   .then(async () => {
